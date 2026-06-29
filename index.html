@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NIKTO | Booking</title>
+  <link rel="icon" type="image/png" href="./assets/nikto-logo.png">
+  <link rel="apple-touch-icon" href="./assets/nikto-logo.png">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Prenota il tuo appuntamento per piercing, controllo o cambio gioiello con NIKTO Body Piercer. Lavora presso KATRAME Tattoo Studio (Schio) e ARCANUM (Verona).">
+  <meta name="keywords" content="Nikto, Body Piercer, Piercing Schio, Piercing Verona, Katrame Tattoo Studio, Arcanum Bottega d'Arte, Cal.eu Nikto, prenotazione piercing">
+  <meta name="author" content="NIKTO Body Piercer">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nikto-piercer.github.io/">
+  <meta property="og:title" content="NIKTO Body Piercer | Prenotazioni">
+  <meta property="og:description" content="Seleziona lo studio e prenota il tuo appuntamento con NIKTO Body Piercer.">
+  <meta property="og:image" content="./assets/nikto-photo.jpg">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="app-container">
+    
+    <!-- BRAND HEADER (Always visible, serves as Home Link) -->
+    <header class="brand-header">
+      <a href="#" id="header-logo-btn" title="Torna alla Home" aria-label="Torna alla Home">
+        <div class="logo-slot">
+          <img src="./assets/nikto-logo.png" alt="NIKTO Logo" data-fallback="personal-logo" class="logo-img">
+        </div>
+      </a>
+    </header>
+
+    <!-- VIEW 1: HOME HERO -->
+    <section id="view-home" class="view visible active">
+      <div class="hero-grid">
+        
+        <!-- Left: Text content -->
+        <div class="hero-info">
+          <span class="title-tag" id="home-tag">Professional Body Piercer</span>
+          <h1>NIKTO<br>Body Piercer</h1>
+          <p class="copy">
+            Scegli lo studio in cui vuoi prenotare il tuo prossimo piercing.
+          </p>
+          
+          <button id="cta-prenota" class="btn-primary" aria-label="Apri prenotazioni studi">
+            Prenota Ora
+          </button>
+          
+          <!-- Social buttons -->
+          <div class="social-buttons">
+            <a href="https://www.instagram.com/nikto.piercer/" target="_blank" rel="noopener noreferrer" class="btn-social instagram" title="Instagram" aria-label="Profilo Instagram di NIKTO Piercer">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
+            <a href="https://wa.me/393751129972" target="_blank" rel="noopener noreferrer" class="btn-social whatsapp" title="WhatsApp" aria-label="Contatto WhatsApp di NIKTO Piercer">
+              <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.504-5.729-1.464L0 24zm6.59-4.846c1.6.95 3.198 1.451 4.782 1.452 5.51 0 9.995-4.486 9.998-10.002.002-2.673-1.04-5.186-2.935-7.082C16.539 1.624 14.032.58 11.36.58A10.004 10.004 0 0 0 1.36 10.58c0 1.636.438 3.232 1.267 4.672L1.642 20.25l5.005-1.096zm12.385-6.666c-.33-.164-1.951-.964-2.252-1.074-.3-.109-.519-.164-.738.164-.219.329-.848 1.074-1.039 1.293-.19.22-.382.246-.712.082-.33-.164-1.393-.513-2.653-1.637-1-.892-1.676-1.997-1.873-2.325-.197-.329-.02-.507.145-.671.148-.147.33-.383.495-.574.165-.192.219-.328.329-.547.11-.218.055-.41-.027-.574-.082-.164-.738-1.777-1.011-2.433-.266-.64-.539-.553-.738-.563-.19-.01-.409-.012-.628-.012-.218 0-.573.082-.874.41-.3.329-1.147 1.12-1.147 2.733 0 1.614 1.174 3.172 1.338 3.391.164.22 2.31 3.527 5.596 4.949.78.337 1.39.539 1.865.69.784.249 1.498.214 2.061.129.628-.095 1.951-.798 2.224-1.57.274-.771.274-1.431.192-1.57-.082-.139-.3-.221-.63-.385z"/></svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Right: Portrait space -->
+        <div class="hero-image-wrapper">
+          <img src="./assets/nikto-photo.png" alt="NIKTO Body Piercer Portrait" data-fallback="nikto-photo" class="hero-img">
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- VIEW 2: BOOKING (STUDIO LIST) -->
+    <section id="view-booking" class="view">
+      
+      <!-- Back button -->
+      <button class="back-link btn-back-home" aria-label="Torna alla Home">
+        <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+        Home
+      </button>
+
+      <div class="booking-header">
+        <h2>Scegli lo Studio</h2>
+        <p>Seleziona la sede in cui desideri prenotare il tuo appuntamento:</p>
+      </div>
+
+      <!-- Studio Grid -->
+      <div class="studios-grid">
+        
+        <!-- Studio 1: Katrame -->
+        <article class="studio-card" data-studio-key="katrame" tabindex="0" aria-label="KATRAME Tattoo Studio a Schio. Clicca per i dettagli e prenotazione.">
+          <div class="studio-card-info">
+            <div class="studio-logo-box">
+              <img src="./assets/katrame.jpg" alt="KATRAME Tattoo Studio Logo" data-fallback="logo-studio" data-initial="K" class="studio-logo-img">
+            </div>
+            <div class="studio-name-location">
+              <h3>KATRAME Tattoo Studio</h3>
+              <span class="location">(Schio)</span>
+            </div>
+          </div>
+          <div class="studio-card-cta">
+            <span>Seleziona Studio</span>
+            <svg viewBox="0 0 24 24"><path d="M5 13h11.86l-5.43 5.43L13 20l8-8-8-8-1.41 1.41 5.43 5.43H5v2z"/></svg>
+          </div>
+        </article>
+
+        <!-- Studio 2: Arcanum -->
+        <article class="studio-card" data-studio-key="arcanum" tabindex="0" aria-label="ARCANUM Bottega d'Arte e Tattoo Studio a Verona. Clicca per i dettagli e prenotazione.">
+          <div class="studio-card-info">
+            <div class="studio-logo-box">
+              <img src="./assets/arcanum.jpg" alt="ARCANUM Logo" data-fallback="logo-studio" data-initial="A" class="studio-logo-img">
+            </div>
+            <div class="studio-name-location">
+              <h3>ARCANUM — Bottega d'Arte</h3>
+              <span class="location">(Verona)</span>
+            </div>
+          </div>
+          <div class="studio-card-cta">
+            <span>Seleziona Studio</span>
+            <svg viewBox="0 0 24 24"><path d="M5 13h11.86l-5.43 5.43L13 20l8-8-8-8-1.41 1.41 5.43 5.43H5v2z"/></svg>
+          </div>
+        </article>
+
+      </div>
+      
+      <!-- Back to home centering links -->
+      <div class="center-back-link">
+        <button class="back-link btn-back-home" aria-label="Torna alla Home">Torna alla Home</button>
+      </div>
+
+    </section>
+
+    <!-- VIEW 3: STUDIO DETAIL VIEW -->
+    <section id="view-detail" class="view">
+      
+      <!-- Back button -->
+      <button id="btn-back-studios" class="back-link" aria-label="Torna alla lista degli studi">
+        <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+        Studi
+      </button>
+
+      <div class="detail-container">
+        
+        <!-- Studio header card -->
+        <div class="detail-header-card">
+          <div class="detail-header-info">
+            <div class="studio-logo-box" id="detail-logo-container">
+              <!-- Populated dynamically by JS -->
+              <img src="" alt="" id="detail-logo" class="studio-logo-img">
+            </div>
+            <div>
+              <h2 id="detail-studio-name">Studio Name</h2>
+              
+              <!-- Clickable full address link -->
+              <a href="#" id="detail-address-link" target="_blank" rel="noopener noreferrer" class="address-link" title="Apri su Google Maps">
+                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <span id="detail-address-text">Address text</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic services booking CTA buttons -->
+        <div class="services-container">
+          
+          <!-- Service 1: Nuovo piercing -->
+          <a href="#" id="link-nuovo-piercing" class="service-card" aria-label="Prenota Nuovo piercing">
+            <h4>
+              <span>Nuovo piercing</span>
+              <svg class="arrow-indicator" viewBox="0 0 24 24"><path d="M5 13h11.86l-5.43 5.43L13 20l8-8-8-8-1.41 1.41 5.43 5.43H5v2z"/></svg>
+            </h4>
+          </a>
+
+          <!-- Service 2: Cambio, rimozione o acquisto gioiello -->
+          <a href="#" id="link-cambio-gioiello" class="service-card" aria-label="Prenota Cambio, rimozione o acquisto gioiello">
+            <h4>
+              <span>Cambio, rimozione o acquisto gioiello</span>
+              <svg class="arrow-indicator" viewBox="0 0 24 24"><path d="M5 13h11.86l-5.43 5.43L13 20l8-8-8-8-1.41 1.41 5.43 5.43H5v2z"/></svg>
+            </h4>
+          </a>
+
+          <!-- Service 3: Controllo piercing e consulenza -->
+          <a href="#" id="link-controllo-consulenza" class="service-card" aria-label="Prenota Controllo piercing e consulenza">
+            <h4>
+              <span>Controllo piercing e consulenza</span>
+              <svg class="arrow-indicator" viewBox="0 0 24 24"><path d="M5 13h11.86l-5.43 5.43L13 20l8-8-8-8-1.41 1.41 5.43 5.43H5v2z"/></svg>
+            </h4>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- VIEW 4: SERVICE DETAIL VIEW WITH INLINE CAL EMBED -->
+    <section id="view-service" class="view">
+      
+      <!-- Back button -->
+      <button id="btn-back-detail" class="back-link" aria-label="Torna alla lista dei servizi dello studio">
+        <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+        Servizi
+      </button>
+
+      <div class="detail-container">
+        
+        <!-- Studio Banner Card -->
+        <div class="service-studio-banner">
+          <div class="studio-logo-box small" id="service-studio-logo-container">
+            <!-- Studio Logo populated dynamically by JS -->
+          </div>
+          <div>
+            <span class="studio-location" id="service-studio-location">Studio Location</span>
+            <h3 class="studio-name-mini" id="service-studio-name">Studio Name</h3>
+          </div>
+        </div>
+
+        <!-- Service Info Header -->
+        <div class="service-info-header">
+          <h2 id="service-booking-title">Titolo Servizio</h2>
+          <p id="service-booking-desc">Descrizione del servizio...</p>
+          <div class="service-duration-badge">
+            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+            <span id="service-booking-duration">Durata: -- minuti</span>
+          </div>
+        </div>
+
+        <!-- Cal Embed Frame -->
+        <div class="cal-embed-wrapper">
+          <!-- Cal target element created dynamically by JS to match the ID pattern expected by Cal -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <p>&copy; 2026 NIKTO Body Piercer. Tutti i diritti riservati.</p>
+    </footer>
+
+  </main>
+
+  <!-- Application Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
