@@ -3,23 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+
   <title>NIKTO | Booking</title>
+  <meta name="description" content="Prenota online il tuo appuntamento in pochi passaggi.">
+  <meta name="robots" content="index,follow">
+  <meta name="author" content="NIKTO Body Piercer">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="canonical" href="https://niktopiercer.github.io/booking/">
+
   <link rel="icon" type="image/png" href="./assets/nikto-logo.png">
   <link rel="apple-touch-icon" href="./assets/nikto-logo.png">
-  
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Prenota il tuo appuntamento per piercing, controllo o cambio gioiello con NIKTO Body Piercer. Lavora presso KATRAME Tattoo Studio (Schio) e ARCANUM (Verona).">
-  <meta name="keywords" content="Nikto, Body Piercer, Piercing Schio, Piercing Verona, Katrame Tattoo Studio, Arcanum Bottega d'Arte, Cal.eu Nikto, prenotazione piercing">
-  <meta name="author" content="NIKTO Body Piercer">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://nikto-piercer.github.io/">
-  <meta property="og:title" content="NIKTO Body Piercer | Prenotazioni">
-  <meta property="og:description" content="Seleziona lo studio e prenota il tuo appuntamento con NIKTO Body Piercer.">
-  <meta property="og:image" content="./assets/nikto-photo.jpg">
 
-  <!-- Stylesheet -->
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NIKTO Body Piercer">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:url" content="https://niktopiercer.github.io/booking/">
+  <meta property="og:title" content="NIKTO | Booking">
+  <meta property="og:description" content="Prenota online il tuo appuntamento in pochi passaggi.">
+  <meta property="og:image" content="https://niktopiercer.github.io/booking/assets/nikto-photo.png">
+  <meta property="og:image:alt" content="NIKTO Body Piercer">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NIKTO | Booking">
+  <meta name="twitter:description" content="Prenota online il tuo appuntamento in pochi passaggi.">
+  <meta name="twitter:image" content="https://niktopiercer.github.io/booking/assets/nikto-photo.png">
+  <meta name="twitter:image:alt" content="NIKTO Body Piercer">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -84,46 +96,12 @@
         <p>Seleziona la sede in cui desideri prenotare il tuo appuntamento:</p>
       </div>
 
-      <!-- Studio Grid -->
-      <div class="studios-grid">
-        
-        <!-- Studio 1: Katrame -->
-        <article class="studio-card" data-studio-key="katrame" tabindex="0" aria-label="KATRAME Tattoo Studio a Schio. Clicca per i dettagli e prenotazione.">
-          <div class="studio-card-info">
-            <div class="studio-logo-box">
-              <img src="./assets/katrame.jpg" alt="KATRAME Tattoo Studio Logo" data-fallback="logo-studio" data-initial="K" class="studio-logo-img">
-            </div>
-            <div class="studio-name-location">
-              <h3>KATRAME Tattoo Studio</h3>
-              <span class="location">(Schio)</span>
-            </div>
-          </div>
-          <div class="studio-card-cta">
-            <span>Seleziona Studio</span>
-            <svg viewBox="0 0 24 24"><path d="M5 13h11.86l-5.43 5.43L13 20l8-8-8-8-1.41 1.41 5.43 5.43H5v2z"/></svg>
-          </div>
-        </article>
-
-        <!-- Studio 2: Arcanum -->
-        <article class="studio-card" data-studio-key="arcanum" tabindex="0" aria-label="ARCANUM Bottega d'Arte e Tattoo Studio a Verona. Clicca per i dettagli e prenotazione.">
-          <div class="studio-card-info">
-            <div class="studio-logo-box">
-              <img src="./assets/arcanum.jpg" alt="ARCANUM Logo" data-fallback="logo-studio" data-initial="A" class="studio-logo-img">
-            </div>
-            <div class="studio-name-location">
-              <h3>ARCANUM — Bottega d'Arte</h3>
-              <span class="location">(Verona)</span>
-            </div>
-          </div>
-          <div class="studio-card-cta">
-            <span>Seleziona Studio</span>
-            <svg viewBox="0 0 24 24"><path d="M5 13h11.86l-5.43 5.43L13 20l8-8-8-8-1.41 1.41 5.43 5.43H5v2z"/></svg>
-          </div>
-        </article>
-
+      <!-- Studio Grid — popolata dinamicamente da JS (renderStudioCards) -->
+      <div class="studios-grid" id="studios-grid">
+        <!-- Le card degli studi vengono generate da app.js leggendo STUDIOSDATA -->
       </div>
       
-      <!-- Back to home centering links -->
+      <!-- Back to home centering link -->
       <div class="center-back-link">
         <button class="back-link btn-back-home" aria-label="Torna alla Home">Torna alla Home</button>
       </div>
@@ -145,8 +123,7 @@
         <div class="detail-header-card">
           <div class="detail-header-info">
             <div class="studio-logo-box" id="detail-logo-container">
-              <!-- Populated dynamically by JS -->
-              <img src="" alt="" id="detail-logo" class="studio-logo-img">
+              <!-- Logo popolato dinamicamente da JS -->
             </div>
             <div>
               <h2 id="detail-studio-name">Studio Name</h2>
@@ -160,33 +137,9 @@
           </div>
         </div>
 
-        <!-- Dynamic services booking CTA buttons -->
-        <div class="services-container">
-          
-          <!-- Service 1: Nuovo piercing -->
-          <a href="#" id="link-nuovo-piercing" class="service-card" aria-label="Prenota Nuovo piercing">
-            <h4>
-              <span>Nuovo piercing</span>
-              <svg class="arrow-indicator" viewBox="0 0 24 24"><path d="M5 13h11.86l-5.43 5.43L13 20l8-8-8-8-1.41 1.41 5.43 5.43H5v2z"/></svg>
-            </h4>
-          </a>
-
-          <!-- Service 2: Cambio, rimozione o acquisto gioiello -->
-          <a href="#" id="link-cambio-gioiello" class="service-card" aria-label="Prenota Cambio, rimozione o acquisto gioiello">
-            <h4>
-              <span>Cambio, rimozione o acquisto gioiello</span>
-              <svg class="arrow-indicator" viewBox="0 0 24 24"><path d="M5 13h11.86l-5.43 5.43L13 20l8-8-8-8-1.41 1.41 5.43 5.43H5v2z"/></svg>
-            </h4>
-          </a>
-
-          <!-- Service 3: Controllo piercing e consulenza -->
-          <a href="#" id="link-controllo-consulenza" class="service-card" aria-label="Prenota Controllo piercing e consulenza">
-            <h4>
-              <span>Controllo piercing e consulenza</span>
-              <svg class="arrow-indicator" viewBox="0 0 24 24"><path d="M5 13h11.86l-5.43 5.43L13 20l8-8-8-8-1.41 1.41 5.43 5.43H5v2z"/></svg>
-            </h4>
-          </a>
-
+        <!-- Services list — popolata dinamicamente da JS (renderServiceCards) -->
+        <div class="services-container" id="services-container">
+          <!-- Le card dei servizi vengono generate da app.js leggendo SERVICESCONFIG -->
         </div>
 
       </div>
@@ -206,7 +159,7 @@
         <!-- Studio Banner Card -->
         <div class="service-studio-banner">
           <div class="studio-logo-box small" id="service-studio-logo-container">
-            <!-- Studio Logo populated dynamically by JS -->
+            <!-- Logo popolato dinamicamente da JS -->
           </div>
           <div>
             <span class="studio-location" id="service-studio-location">Studio Location</span>
@@ -224,9 +177,9 @@
           </div>
         </div>
 
-        <!-- Cal Embed Frame -->
+        <!-- Cal Embed Frame — target creato dinamicamente da JS (mountCalEmbed) -->
         <div class="cal-embed-wrapper">
-          <!-- Cal target element created dynamically by JS to match the ID pattern expected by Cal -->
+          <!-- Il div target Cal viene creato e rimosso da app.js ad ogni navigazione -->
         </div>
 
       </div>
@@ -238,6 +191,9 @@
     </footer>
 
   </main>
+
+  <!-- Dati studi — modificare questo file per aggiungere/rimuovere/disattivare studi -->
+  <script src="studios.js"></script>
 
   <!-- Application Logic -->
   <script src="app.js"></script>

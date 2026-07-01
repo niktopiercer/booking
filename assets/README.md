@@ -1,25 +1,36 @@
-# Cartella Assets - NIKTO Body Piercer
+# Cartella Assets — NIKTO Body Piercer
 
-In questa cartella vanno posizionate le immagini del sito. Se un'immagine manca, il sito mostrerà automaticamente dei segnaposto (placeholder) grafici premium e coerenti.
+Questa cartella contiene le immagini del sito. Se un'immagine manca, il sito mostra automaticamente placeholder grafici premium.
 
-## File Richiesti:
+## Struttura
 
-1. **Foto Hero di Nikto**:
-   - Nome file: `nikto-photo.jpg` (o `.png` / `.webp`)
-   - Posizione consigliata: `./assets/nikto-photo.png`
-   - Descrizione: La tua foto principale per la home page.
+```
+assets/
+├── studios/          ← loghi degli studi (gestiti dal tool esterno)
+│   ├── katrame.jpg
+│   └── arcanum.jpg
+├── nikto-logo.png    ← logo personale NIKTO (header)
+├── nikto-photo.png   ← foto ritratto per la home hero
+└── README.md
+```
 
-2. **Logo Personale**:
-   - Nome file: `nikto-logo.png` (o `.jpg` / `.svg`)
-   - Posizione consigliata: `./assets/nikto-logo.png`
-   - Descrizione: Il tuo logo personale (che include l'accento viola).
+## Immagini richieste
 
-3. **Logo KATRAME Tattoo Studio**:
-   - Nome file: `katrame.jpg` (o `.png`)
-   - Posizione consigliata: `./assets/katrame.jpg`
-   - Descrizione: Il logo dello studio Katrame di Schio.
+### Sito principale
+- `nikto-logo.png` — Logo personale (header, favicon). Consigliato: PNG con trasparenza, ~200×200px
+- `nikto-photo.png` — Foto ritratto per la home hero. Consigliato: formato verticale 4/5
 
-4. **Logo ARCANUM Studio**:
-   - Nome file: `arcanum.jpg` (o `.png`)
-   - Posizione consigliata: `./assets/arcanum.jpg`
-   - Descrizione: Il logo dello studio Arcanum di Verona.
+### Loghi studi (in `assets/studios/`)
+Ogni studio ha il proprio logo in questa sottocartella.
+Il path di ogni logo è configurato nel campo `logo` in `studios.js`.
+
+Se un logo manca o non si carica, il sito mostra automaticamente un placeholder
+con la lettera iniziale dello studio (configurata nel campo `initial` in `studios.js`).
+
+## Aggiungere un nuovo logo studio
+
+1. Salva il file in `assets/studios/nome-studio.jpg` (o `.png`)
+2. Aggiorna il campo `logo` del corrispondente studio in `studios.js`:
+   ```js
+   logo: "./assets/studios/nome-studio.jpg"
+   ```
