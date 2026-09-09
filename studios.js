@@ -78,7 +78,7 @@ const STUDIOS_DATA = [
     location: "Castelgomberto",
     address: "Via Verdi, 40F — Castelgomberto (VI)",
     mapsLink: "https://maps.app.goo.gl/jUfcUZKQgTKRL2yn9",
-    logo: "./assets/studios/pigmento",
+    logo: "./assets/studios/pigmento.jpg",
     initial: "P",
     services: {
       "nuovo-piercing": { calLink: "nikto/nuovo-piercing-pigmento-tattoo-castelgomberto" },
@@ -96,7 +96,7 @@ const STUDIOS_DATA = [
     location: "Levico Terme",
     address: "Via Guglielmo Marconi, 8 — Levico Terme (TN)",
     mapsLink: "https://maps.app.goo.gl/a4TseForyH48pFn76",
-    logo: "./assets/studios/devi",
+    logo: "./assets/studios/devi.jpg",
     initial: "D",
     services: {
       "nuovo-piercing": { calLink: "nikto/nuovo-piercing-devi-tattoo-levico" },
