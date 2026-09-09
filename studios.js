@@ -31,66 +31,77 @@
 //                         Formato tipico: "username/nome-evento"
 //                         Es: "nikto/nuovo-piercing-katrame"
 // =============================================================================
-
 const STUDIOS_DATA = [
-
   // ---------------------------------------------------------------------------
-  // STUDIO: KATRAME Tattoo Studio — Schio (VI)
+  // STUDIO: KATRAME Tattoo Studio — Schio
   // ---------------------------------------------------------------------------
   {
-    id:       "katrame",
-    active:   true,
-    name:     "KATRAME Tattoo Studio",
+    id: "katrame",
+    active: true,
+    name: "KATRAME Tattoo Studio",
     location: "Schio",
-    address:  "Via B. Brandellero, 22 — Schio (VI)",
-    mapsLink: "https://www.google.com/maps/place//data=!4m2!3m1!1s0x4778b3ab4d72869f:0xc989f142444135aa",
-    logo:     "./assets/studios/katrame.jpg",
-    initial:  "K",
+    address: "Via B. Brandellero, 22 — Schio (VI)",
+    mapsLink: "https://maps.app.goo.gl/ysLJ8ofrnhig9Zx47",
+    logo: "./assets/studios/katrame.jpg",
+    initial: "K",
     services: {
-      "nuovo-piercing":       { calLink: "nikto/nuovo-piercing-katrame" },
-      "cambio-gioiello":      { calLink: "nikto/cambio-gioiello-katrame" },
+      "nuovo-piercing": { calLink: "nikto/nuovo-piercing-katrame" },
+      "cambio-gioiello": { calLink: "nikto/cambio-gioiello-katrame" },
       "controllo-consulenza": { calLink: "nikto/controllo-consulenza-katrame" }
     }
   },
-
   // ---------------------------------------------------------------------------
-  // STUDIO: ARCANUM — Bottega d'Arte — Verona (VR)
+  // STUDIO: ARCANUM — Bottega d'Arte — Verona
   // ---------------------------------------------------------------------------
   {
-    id:       "arcanum",
-    active:   true,
-    name:     "ARCANUM — Bottega d'Arte",
+    id: "arcanum",
+    active: true,
+    name: "ARCANUM — Bottega d'Arte",
     location: "Verona",
-    address:  "Via della Valverde, 57 — Verona (VR)",
-    mapsLink: "https://www.google.com/maps/place//data=!4m2!3m1!1s0x477f5ff9c10ba373:0xe9b79958a0abdc95",
-    logo:     "./assets/studios/arcanum.jpg",
-    initial:  "A",
+    address: "Via della Valverde, 57 — Verona (VR)",
+    mapsLink: "https://maps.app.goo.gl/piqkG35yF49akjNy6",
+    logo: "./assets/studios/arcanum.jpg",
+    initial: "A",
     services: {
-      "nuovo-piercing":       { calLink: "nikto/nuovo-piercing-arcanum" },
-      "cambio-gioiello":      { calLink: "nikto/cambio-gioiello-arcanum" },
+      "nuovo-piercing": { calLink: "nikto/nuovo-piercing-arcanum" },
+      "cambio-gioiello": { calLink: "nikto/cambio-gioiello-arcanum" },
       "controllo-consulenza": { calLink: "nikto/controllo-consulenza-arcanum" }
     }
+  },
+  // ---------------------------------------------------------------------------
+  // STUDIO: PIGMENTO  Tattoo Lab — Castelgomberto
+  // ---------------------------------------------------------------------------
+  {
+    id: "pigmento",
+    active: true,
+    name: "PIGMENTO  Tattoo Lab",
+    location: "Castelgomberto",
+    address: "Via Verdi, 40F — Castelgomberto (VI)",
+    mapsLink: "https://maps.app.goo.gl/jUfcUZKQgTKRL2yn9",
+    logo: "./assets/studios/pigmento",
+    initial: "P",
+    services: {
+      "nuovo-piercing": { calLink: "nikto/nuovo-piercing-pigmento-tattoo-castelgomberto" },
+      "cambio-gioiello": { calLink: "nikto/cambio-rimozione-o-acquisto-gioiello-pigmento-tattoo-castelgomberto" },
+      "controllo-consulenza": { calLink: "nikto/controllo-piercing-e-consulenza-pigmento-tattoo-castelgomberto" }
+    }
+  },
+  // ---------------------------------------------------------------------------
+  // STUDIO: DEVI  Tattoo — Levico Terme
+  // ---------------------------------------------------------------------------
+  {
+    id: "devi",
+    active: true,
+    name: "DEVI  Tattoo",
+    location: "Levico Terme",
+    address: "Via Guglielmo Marconi, 8 — Levico Terme (TN)",
+    mapsLink: "https://maps.app.goo.gl/a4TseForyH48pFn76",
+    logo: "./assets/studios/devi",
+    initial: "D",
+    services: {
+      "nuovo-piercing": { calLink: "nikto/nuovo-piercing-devi-tattoo-levico" },
+      "cambio-gioiello": { calLink: "nikto/cambio-rimozione-o-acquisto-gioiello-devi-tattoo-levico" },
+      "controllo-consulenza": { calLink: "nikto/controllo-piercing-e-consulenza-devi-tattoo-levico" }
+    }
   }
-
-  // ---------------------------------------------------------------------------
-  // AGGIUNGERE QUI nuovi studi seguendo lo stesso schema.
-  // Esempio studio disattivato temporaneamente:
-  //
-  // {
-  //   id:       "nuovo-studio",
-  //   active:   false,           ← non comparirà nel sito
-  //   name:     "Nome Studio",
-  //   location: "Città",
-  //   address:  "Via ...",
-  //   mapsLink: "https://maps.google.com/...",
-  //   logo:     "./assets/studios/nuovo-studio.jpg",
-  //   initial:  "N",
-  //   services: {
-  //     "nuovo-piercing":       { calLink: "nikto/nuovo-piercing-nuovo-studio" },
-  //     "cambio-gioiello":      { calLink: "nikto/cambio-gioiello-nuovo-studio" },
-  //     "controllo-consulenza": { calLink: "nikto/controllo-consulenza-nuovo-studio" }
-  //   }
-  // }
-  // ---------------------------------------------------------------------------
-
 ];
