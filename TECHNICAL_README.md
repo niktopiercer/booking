@@ -89,12 +89,12 @@ aggiornare solo questa riga in `studios.js`:
 
 ---
 
-## Come ottenere il calLink da Cal.eu
+## Come ottenere il calLink da cal.com
 
-1. Aprire Cal.eu / Cal.com → Event Types
+1. Aprire cal.com / Cal.com → Event Types
 2. Selezionare l'evento desiderato
 3. Il calLink è la parte del link dopo il dominio:
-   - Es. `https://app.cal.eu/nikto/nuovo-piercing-katrame`
+   - Es. `https://app.cal.com/nikto/nuovo-piercing-katrame`
    - Il calLink da salvare è: `nikto/nuovo-piercing-katrame`
 
 Non serve incollare snippet completi — solo il path.
@@ -118,7 +118,7 @@ L'unico dato per-studio per ogni servizio è il `calLink`.
 ## Compatibilità
 
 - **GitHub Pages**: sì, sito statico puro (HTML + CSS + JS, nessun backend)
-- **Cal.eu embed**: inline, configurazione centralizzata in `app.js`
+- **cal.com embed**: inline, configurazione centralizzata in `app.js`
 - **Sviluppo locale**: aprire `index.html` direttamente nel browser (funziona su `file://`)
 
 ---
