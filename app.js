@@ -55,12 +55,12 @@ let activeStudioId = "";
 // =============================================================================
 // 2. CAL EMBED ENGINE
 // =============================================================================
-// Funzione centralizzata per montare l'embed Cal.eu inline.
+// Funzione centralizzata per montare l'embed cal.com inline.
 // Tutta la configurazione comune (tema, colori brand, layout) è qui e non si ripete.
 // L'unico dato variabile è calLink (proveniente da studios.js).
 
 /**
- * Carica lo script Cal.eu una sola volta e lo inietta nel <head>.
+ * Carica lo script cal.com una sola volta e lo inietta nel <head>.
  * Le chiamate successive usano l'istanza già caricata.
  */
 function ensureCalScriptLoaded() {
@@ -93,14 +93,14 @@ function ensureCalScriptLoaded() {
       }
       p(cal, ar);
     };
-  })(window, "https://app.cal.eu/embed/embed.js", "init");
+  })(window, "https://app.cal.com/embed/embed.js", "init");
 }
 
 /**
  * Monta l'embed Cal inline dentro il contenitore .cal-embed-wrapper.
  * Pulisce sempre l'embed precedente prima di montare il nuovo.
  *
- * @param {string} calLink  — Il link Cal.eu dell'evento (es. "nikto/nuovo-piercing-katrame").
+ * @param {string} calLink  — Il link cal.com dell'evento (es. "nikto/nuovo-piercing-katrame").
  *                            Viene da studios.js → studio.services[serviceId].calLink
  * @param {string} namespace — Identificatore univoco per questo montaggio (es. "nuovo-piercing-katrame").
  */
@@ -122,7 +122,7 @@ function mountCalEmbed(calLink, namespace) {
   calTarget.style.cssText = "width:100%; height:100%; overflow:scroll;";
   embedWrapper.appendChild(calTarget);
 
-  // Assicura che lo script Cal.eu sia caricato
+  // Assicura che lo script cal.com sia caricato
   ensureCalScriptLoaded();
 
   // Abilita il forwarding dei query params (es. per UTM)
@@ -130,7 +130,7 @@ function mountCalEmbed(calLink, namespace) {
   Cal.config.forwardQueryParams = true;
 
   // Inizializza il namespace univoco per questo embed
-  Cal("init", namespace, { origin: "https://app.cal.eu" });
+  Cal("init", namespace, { origin: "https://app.cal.com" });
 
   // Monta il widget inline — layout mensile, tema dark
   Cal.ns[namespace]("inline", {
