@@ -27,7 +27,7 @@
 //   initial   {string}  — Lettera iniziale per il placeholder grafico se il logo manca
 //
 //   services  {object}  — Oggetto con i 3 servizi standard. Per ogni servizio:
-//     calLink {string}  — Il solo campo variabile: il link Cal.eu per questo studio+servizio
+//     calLink {string}  — Il solo campo variabile: il link cal.com per questo studio+servizio
 //                         Formato tipico: "username/nome-evento"
 //                         Es: "nikto/nuovo-piercing-katrame"
 // =============================================================================
